@@ -1,12 +1,15 @@
 PODS:
-  - SlideMenuControllerSwift (2.2.2)
+  - SlideMenuControllerSwift (3.0.0)
+  - Toast-Swift (2.0.0)
 
 DEPENDENCIES:
   - SlideMenuControllerSwift
+  - Toast-Swift (~> 2.0.0)
 
 SPEC CHECKSUMS:
-  SlideMenuControllerSwift: e257221100c39d49edccaaeb0238b55a0c67953a
+  SlideMenuControllerSwift: 9c0a84f9a3fba51681debd7be77617094562ebcc
+  Toast-Swift: 5b2f8f720f7e78e48511f693df1f9c9a6e38a25a
 
-PODFILE CHECKSUM: c7570d135a1bb2d04f850c0875f2285f0a4d4c08
+PODFILE CHECKSUM: 8efe95eb7833a251c68a33f3658cf2386776311d
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.1.1

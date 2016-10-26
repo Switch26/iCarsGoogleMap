@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "457FEE94EB5FF07C1F2F2766752DEDD0"
-               BuildableName = "Pods_iCarsGoogleMap.framework"
-               BlueprintName = "Pods-iCarsGoogleMap"
+               BlueprintIdentifier = "105C0F0A0EF1F1B51AF910EC9844F61D"
+               BuildableName = "Toast_Swift.framework"
+               BlueprintName = "Toast-Swift"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "457FEE94EB5FF07C1F2F2766752DEDD0"
-            BuildableName = "Pods_iCarsGoogleMap.framework"
-            BlueprintName = "Pods-iCarsGoogleMap"
+            BlueprintIdentifier = "105C0F0A0EF1F1B51AF910EC9844F61D"
+            BuildableName = "Toast_Swift.framework"
+            BlueprintName = "Toast-Swift"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
