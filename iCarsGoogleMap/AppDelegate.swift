@@ -19,20 +19,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         
-        ///*
-        let mapVC = MapViewController(nibName: "MapViewController", bundle: nil)
+        // Creating instances of view controllers
         let leftMenuVC = LeftMenuViewController(nibName: "LeftMenuViewController", bundle: nil)
+        let mapVC = MapViewController(nibName: "MapViewController", bundle: nil)
         
-        let slideMenuController = SlideMenuController(mainViewController: mapVC, leftMenuViewController: leftMenuVC)
+        // Creating navigation controller and pushing mapVC to present it
+        let navController = UINavigationController()
+        navController.pushViewController(mapVC, animated: false)
         
+        mapVC.navigationItem.title = "Map"
+        mapVC.addLeftBarButtonWithImage(#imageLiteral(resourceName: "MenuButton"))
+        
+        // Creating slide menu and assigning view controllers
+        let slideMenuController = SlideMenuController(mainViewController: navController, leftMenuViewController: leftMenuVC)
 
         self.window?.rootViewController = slideMenuController
         self.window?.makeKeyAndVisible()
-        
-        //self.window?.rootViewController?.present(mapVC, animated: false, completion: nil)
-
-        
-        //*/
         
         return true
     }

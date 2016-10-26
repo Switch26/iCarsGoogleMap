@@ -7,13 +7,35 @@
 //
 
 import UIKit
+import SlideMenuControllerSwift
 
-class MapViewController: UIViewController {
+
+class MapViewController: UIViewController, LeftMenuDelegate {
+    
+    var leftMenuVC: LeftMenuViewController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        leftMenuVC = slideMenuController()?.leftViewController as? LeftMenuViewController
+        leftMenuVC?.delegate = self
+        
+    }
+    
+    //Mark: Left Slide Menu delegate methods
+    func sanFrancisoButtonPressed() {
+        slideMenuController()?.closeLeft()
+        print("San Francisco")
+    }
+    
+    func newYorkButtonPressed() {
+        slideMenuController()?.closeLeft()
+        print("New York")
+    }
+    
+    func fromSFtoNYButtonPressed() {
+        slideMenuController()?.closeLeft()
+        print("from NY to SF")
     }
 
 }

@@ -16,18 +16,48 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Left menu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uqX-D9-zs3">
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BWk-ou-0w1">
+                    <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="74" id="QaA-Rw-OXz"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="yf9-WX-dRH">
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dpm-zZ-3MB">
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                            <state key="normal" title="San Francisco"/>
+                            <connections>
+                                <action selector="sanFranciscoButtonPressed:" destination="-1" eventType="touchUpInside" id="0gu-WX-R6p"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lYQ-jE-us6">
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                            <state key="normal" title="New York"/>
+                            <connections>
+                                <action selector="newYorkButtonPressed:" destination="-1" eventType="touchUpInside" id="BjP-o1-8LR"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mjt-FA-EmN">
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                            <state key="normal" title="From SF to NY"/>
+                            <connections>
+                                <action selector="fromSFtoNYButtonPressed:" destination="-1" eventType="touchUpInside" id="WbQ-rF-1fZ"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="uqX-D9-zs3" firstAttribute="centerX" secondItem="nop-wL-cJ7" secondAttribute="centerX" id="Plt-wa-HdH"/>
-                <constraint firstItem="uqX-D9-zs3" firstAttribute="centerY" secondItem="nop-wL-cJ7" secondAttribute="centerY" id="QCe-Xc-nYx"/>
+                <constraint firstItem="BWk-ou-0w1" firstAttribute="top" secondItem="nop-wL-cJ7" secondAttribute="top" id="ARX-Bb-hg8"/>
+                <constraint firstAttribute="trailing" secondItem="yf9-WX-dRH" secondAttribute="trailing" constant="16" id="OXI-Nj-wMr"/>
+                <constraint firstItem="yf9-WX-dRH" firstAttribute="leading" secondItem="nop-wL-cJ7" secondAttribute="leading" constant="16" id="gjj-vw-k3f"/>
+                <constraint firstAttribute="trailing" secondItem="BWk-ou-0w1" secondAttribute="trailing" id="lnJ-If-mij"/>
+                <constraint firstItem="BWk-ou-0w1" firstAttribute="leading" secondItem="nop-wL-cJ7" secondAttribute="leading" id="pg3-XF-PGj"/>
+                <constraint firstItem="yf9-WX-dRH" firstAttribute="top" secondItem="BWk-ou-0w1" secondAttribute="bottom" constant="16" id="xwA-mA-HIh"/>
             </constraints>
-            <point key="canvasLocation" x="-27" y="-42"/>
+            <point key="canvasLocation" x="-27.5" y="-42.5"/>
         </view>
     </objects>
 </document>
