@@ -16,7 +16,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        
+        ///*
+        let mapVC = MapViewController(nibName: "MapViewController", bundle: nil)
+        let leftMenuVC = LeftMenuViewController(nibName: "LeftMenuViewController", bundle: nil)
+        
+        let slideMenuController = SlideMenuController(mainViewController: mapVC, leftMenuViewController: leftMenuVC)
+        
+
+        self.window?.rootViewController = slideMenuController
+        self.window?.makeKeyAndVisible()
+        
+        //self.window?.rootViewController?.present(mapVC, animated: false, completion: nil)
+
+        
+        //*/
+        
         return true
     }
 

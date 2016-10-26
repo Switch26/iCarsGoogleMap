@@ -9,10 +9,12 @@
 /* Begin PBXBuildFile section */
 		8137DD04CF0AA564CBCC2A70 /* Pods_iCarsGoogleMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 099B5CCEE0218AE629536384 /* Pods_iCarsGoogleMap.framework */; };
 		9E9A7C3B1DC0E7AD0067B115 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9A7C3A1DC0E7AD0067B115 /* AppDelegate.swift */; };
-		9E9A7C3D1DC0E7AD0067B115 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9A7C3C1DC0E7AD0067B115 /* ViewController.swift */; };
-		9E9A7C401DC0E7AD0067B115 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E9A7C3E1DC0E7AD0067B115 /* Main.storyboard */; };
 		9E9A7C421DC0E7AD0067B115 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E9A7C411DC0E7AD0067B115 /* Assets.xcassets */; };
 		9E9A7C451DC0E7AD0067B115 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E9A7C431DC0E7AD0067B115 /* LaunchScreen.storyboard */; };
+		9E9A7C501DC0F3960067B115 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9A7C4E1DC0F3960067B115 /* MapViewController.swift */; };
+		9E9A7C571DC0F6C60067B115 /* LeftMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9A7C551DC0F6C60067B115 /* LeftMenuViewController.swift */; };
+		9E9A7C581DC0F6C60067B115 /* LeftMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E9A7C561DC0F6C60067B115 /* LeftMenuViewController.xib */; };
+		9E9A7C5D1DC1018A0067B115 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E9A7C5C1DC1018A0067B115 /* MapViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,11 +22,13 @@
 		8C26FA658262625AD3D2CE64 /* Pods-iCarsGoogleMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iCarsGoogleMap.release.xcconfig"; path = "Pods/Target Support Files/Pods-iCarsGoogleMap/Pods-iCarsGoogleMap.release.xcconfig"; sourceTree = "<group>"; };
 		9E9A7C371DC0E7AD0067B115 /* iCarsGoogleMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iCarsGoogleMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E9A7C3A1DC0E7AD0067B115 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9E9A7C3C1DC0E7AD0067B115 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		9E9A7C3F1DC0E7AD0067B115 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9E9A7C411DC0E7AD0067B115 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9E9A7C441DC0E7AD0067B115 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E9A7C461DC0E7AD0067B115 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9E9A7C4E1DC0F3960067B115 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		9E9A7C551DC0F6C60067B115 /* LeftMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftMenuViewController.swift; sourceTree = "<group>"; };
+		9E9A7C561DC0F6C60067B115 /* LeftMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeftMenuViewController.xib; sourceTree = "<group>"; };
+		9E9A7C5C1DC1018A0067B115 /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
 		F93F3391FFFAFE2FE4638479 /* Pods-iCarsGoogleMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iCarsGoogleMap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iCarsGoogleMap/Pods-iCarsGoogleMap.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,13 +83,31 @@
 			isa = PBXGroup;
 			children = (
 				9E9A7C3A1DC0E7AD0067B115 /* AppDelegate.swift */,
-				9E9A7C3C1DC0E7AD0067B115 /* ViewController.swift */,
-				9E9A7C3E1DC0E7AD0067B115 /* Main.storyboard */,
+				9E9A7C591DC0F6CB0067B115 /* Menu */,
+				9E9A7C541DC0F69E0067B115 /* Map */,
 				9E9A7C411DC0E7AD0067B115 /* Assets.xcassets */,
 				9E9A7C431DC0E7AD0067B115 /* LaunchScreen.storyboard */,
 				9E9A7C461DC0E7AD0067B115 /* Info.plist */,
 			);
 			path = iCarsGoogleMap;
+			sourceTree = "<group>";
+		};
+		9E9A7C541DC0F69E0067B115 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				9E9A7C4E1DC0F3960067B115 /* MapViewController.swift */,
+				9E9A7C5C1DC1018A0067B115 /* MapViewController.xib */,
+			);
+			name = Map;
+			sourceTree = "<group>";
+		};
+		9E9A7C591DC0F6CB0067B115 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				9E9A7C551DC0F6C60067B115 /* LeftMenuViewController.swift */,
+				9E9A7C561DC0F6C60067B115 /* LeftMenuViewController.xib */,
+			);
+			name = Menu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,7 +176,8 @@
 			files = (
 				9E9A7C451DC0E7AD0067B115 /* LaunchScreen.storyboard in Resources */,
 				9E9A7C421DC0E7AD0067B115 /* Assets.xcassets in Resources */,
-				9E9A7C401DC0E7AD0067B115 /* Main.storyboard in Resources */,
+				9E9A7C581DC0F6C60067B115 /* LeftMenuViewController.xib in Resources */,
+				9E9A7C5D1DC1018A0067B115 /* MapViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,22 +236,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E9A7C3D1DC0E7AD0067B115 /* ViewController.swift in Sources */,
 				9E9A7C3B1DC0E7AD0067B115 /* AppDelegate.swift in Sources */,
+				9E9A7C501DC0F3960067B115 /* MapViewController.swift in Sources */,
+				9E9A7C571DC0F6C60067B115 /* LeftMenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		9E9A7C3E1DC0E7AD0067B115 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9E9A7C3F1DC0E7AD0067B115 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		9E9A7C431DC0E7AD0067B115 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
