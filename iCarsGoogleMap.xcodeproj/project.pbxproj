@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8137DD04CF0AA564CBCC2A70 /* Pods_iCarsGoogleMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 099B5CCEE0218AE629536384 /* Pods_iCarsGoogleMap.framework */; };
 		9E9A7C3B1DC0E7AD0067B115 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9A7C3A1DC0E7AD0067B115 /* AppDelegate.swift */; };
 		9E9A7C3D1DC0E7AD0067B115 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9A7C3C1DC0E7AD0067B115 /* ViewController.swift */; };
 		9E9A7C401DC0E7AD0067B115 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E9A7C3E1DC0E7AD0067B115 /* Main.storyboard */; };
@@ -15,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		099B5CCEE0218AE629536384 /* Pods_iCarsGoogleMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iCarsGoogleMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C26FA658262625AD3D2CE64 /* Pods-iCarsGoogleMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iCarsGoogleMap.release.xcconfig"; path = "Pods/Target Support Files/Pods-iCarsGoogleMap/Pods-iCarsGoogleMap.release.xcconfig"; sourceTree = "<group>"; };
 		9E9A7C371DC0E7AD0067B115 /* iCarsGoogleMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iCarsGoogleMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E9A7C3A1DC0E7AD0067B115 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9E9A7C3C1DC0E7AD0067B115 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		9E9A7C411DC0E7AD0067B115 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9E9A7C441DC0E7AD0067B115 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E9A7C461DC0E7AD0067B115 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F93F3391FFFAFE2FE4638479 /* Pods-iCarsGoogleMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iCarsGoogleMap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iCarsGoogleMap/Pods-iCarsGoogleMap.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8137DD04CF0AA564CBCC2A70 /* Pods_iCarsGoogleMap.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2393DE931F0526C5F72A88E1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				099B5CCEE0218AE629536384 /* Pods_iCarsGoogleMap.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		91DCFDA438B7E41EE700D939 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F93F3391FFFAFE2FE4638479 /* Pods-iCarsGoogleMap.debug.xcconfig */,
+				8C26FA658262625AD3D2CE64 /* Pods-iCarsGoogleMap.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		9E9A7C2E1DC0E7AC0067B115 = {
 			isa = PBXGroup;
 			children = (
 				9E9A7C391DC0E7AD0067B115 /* iCarsGoogleMap */,
 				9E9A7C381DC0E7AD0067B115 /* Products */,
+				91DCFDA438B7E41EE700D939 /* Pods */,
+				2393DE931F0526C5F72A88E1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9E9A7C491DC0E7AD0067B115 /* Build configuration list for PBXNativeTarget "iCarsGoogleMap" */;
 			buildPhases = (
+				E728D83BDBC6C7397FB9DFFD /* [CP] Check Pods Manifest.lock */,
 				9E9A7C331DC0E7AC0067B115 /* Sources */,
 				9E9A7C341DC0E7AC0067B115 /* Frameworks */,
 				9E9A7C351DC0E7AC0067B115 /* Resources */,
+				F1617097E86EB3E5C2DD00DC /* [CP] Embed Pods Frameworks */,
+				F9E6811BD8AD75BFF785E21F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -97,6 +124,7 @@
 					9E9A7C361DC0E7AC0067B115 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 5W74E9U5N8;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -131,6 +159,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E728D83BDBC6C7397FB9DFFD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F1617097E86EB3E5C2DD00DC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iCarsGoogleMap/Pods-iCarsGoogleMap-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F9E6811BD8AD75BFF785E21F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iCarsGoogleMap/Pods-iCarsGoogleMap-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9E9A7C331DC0E7AC0067B115 /* Sources */ = {
@@ -259,6 +335,7 @@
 		};
 		9E9A7C4A1DC0E7AD0067B115 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F93F3391FFFAFE2FE4638479 /* Pods-iCarsGoogleMap.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5W74E9U5N8;
@@ -272,6 +349,7 @@
 		};
 		9E9A7C4B1DC0E7AD0067B115 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C26FA658262625AD3D2CE64 /* Pods-iCarsGoogleMap.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5W74E9U5N8;
@@ -302,6 +380,7 @@
 				9E9A7C4B1DC0E7AD0067B115 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

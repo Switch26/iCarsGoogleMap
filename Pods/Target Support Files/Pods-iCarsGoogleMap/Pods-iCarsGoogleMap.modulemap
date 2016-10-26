@@ -1,0 +1,6 @@
+framework module Pods_iCarsGoogleMap {
+  umbrella header "Pods-iCarsGoogleMap-umbrella.h"
+
+  export *
+  module * { export * }
+}
