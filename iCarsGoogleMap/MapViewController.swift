@@ -8,6 +8,9 @@
 
 import UIKit
 import SlideMenuControllerSwift
+import Toast_Swift
+import GoogleMaps
+
 
 
 class MapViewController: UIViewController, LeftMenuDelegate {

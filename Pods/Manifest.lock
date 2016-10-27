@@ -1,15 +1,22 @@
 PODS:
+  - GoogleMaps (2.1.0):
+    - GoogleMaps/Maps (= 2.1.0)
+  - GoogleMaps/Base (2.1.0)
+  - GoogleMaps/Maps (2.1.0):
+    - GoogleMaps/Base (= 2.1.0)
   - SlideMenuControllerSwift (3.0.0)
   - Toast-Swift (2.0.0)
 
 DEPENDENCIES:
+  - GoogleMaps
   - SlideMenuControllerSwift
   - Toast-Swift (~> 2.0.0)
 
 SPEC CHECKSUMS:
+  GoogleMaps: 06589b9a38097bce0cd6e90f0fd9b5e4b4a9344c
   SlideMenuControllerSwift: 9c0a84f9a3fba51681debd7be77617094562ebcc
   Toast-Swift: 5b2f8f720f7e78e48511f693df1f9c9a6e38a25a
 
-PODFILE CHECKSUM: 8efe95eb7833a251c68a33f3658cf2386776311d
+PODFILE CHECKSUM: cb87d1459eba59bd948f10111b2afa4cb7b2ddb7
 
 COCOAPODS: 1.1.1

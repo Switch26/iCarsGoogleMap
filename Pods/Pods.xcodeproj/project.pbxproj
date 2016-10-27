@@ -10,15 +10,15 @@
 		0A479C6B303A4147BBD2DE2FDC5E2373 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AC5D9C5B838BE747D0154460D02F926 /* Foundation.framework */; };
 		1D3194B6946DF6E5C53DD528EA164D49 /* Pods-iCarsGoogleMap-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF99401EC7DEFFB6265536977930396 /* Pods-iCarsGoogleMap-dummy.m */; };
 		2BF2660629A710F4B0D619F68C8FCFE5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BACC64101FAE4862F8806DB02FC71B0E /* QuartzCore.framework */; };
-		43FC7E2E9B6710B4D56466E916DA2200 /* Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = 816D3D11150C342FFD4A01C7584DD65E /* Info.plist */; };
+		43FC7E2E9B6710B4D56466E916DA2200 /* Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = 3F87E4E71153840B1BC324C42713A4BE /* Info.plist */; };
 		4F4C2D5DE0568202AD6E1C64F4D460A7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AC5D9C5B838BE747D0154460D02F926 /* Foundation.framework */; };
-		4F53F0DD0031C78FC3752608D369A3ED /* SlideMenuControllerSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = 62C78B57DF8E2B78F1D9F85D21F1E9CE /* SlideMenuControllerSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		58BB74E089F658B1FD4209BD596570E0 /* Toast-Swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AEFBDA86974A67FECEFA27A98B399B73 /* Toast-Swift-dummy.m */; };
-		60B009627FE465923BE8A4EE18F5C56C /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72131AB8CA90CDC78757DE98C83CFF2A /* Toast.swift */; };
-		62A0C74C7CC7CDDE65A14C933435ED45 /* Toast-Swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E514E51909E9B855BD9EB4ADE83352B /* Toast-Swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		644D8DFDAE3CD313A142C9391E17D40A /* SlideMenuControllerSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C438987277F7E6A92C5F0B0F6863AD4B /* SlideMenuControllerSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		91BE3C69D0BEFFC36A5D629470EECC9F /* SlideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9A45F048E5BE1D3BE6888B0ED5F93E /* SlideMenuController.swift */; };
-		99D86AF34E59E264B6F56F6E1C4B8436 /* SlideMenuControllerSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EA0B9A53EBE3CB38D822ED37371788 /* SlideMenuControllerSwift-dummy.m */; };
+		4F53F0DD0031C78FC3752608D369A3ED /* SlideMenuControllerSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = 400339F8011BE5A14C8120FC5ED4DBF2 /* SlideMenuControllerSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		58BB74E089F658B1FD4209BD596570E0 /* Toast-Swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CC022CA0085A0A0DC7E651B45046812F /* Toast-Swift-dummy.m */; };
+		60B009627FE465923BE8A4EE18F5C56C /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1EDAA63F86A2C4772B1C0B8CD35FF5 /* Toast.swift */; };
+		62A0C74C7CC7CDDE65A14C933435ED45 /* Toast-Swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A129430BE86F737F18C1BC165E6D846D /* Toast-Swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		644D8DFDAE3CD313A142C9391E17D40A /* SlideMenuControllerSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D4D68DE47A62C65B47A3F73D7513652 /* SlideMenuControllerSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		91BE3C69D0BEFFC36A5D629470EECC9F /* SlideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F680E512C8D84ACBB4AD46404F64B8D /* SlideMenuController.swift */; };
+		99D86AF34E59E264B6F56F6E1C4B8436 /* SlideMenuControllerSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C66C8E1963F4C008BA21BB4A8C8005BA /* SlideMenuControllerSwift-dummy.m */; };
 		C6966FFBDDFA1101B65E7F12A694C5C6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AC5D9C5B838BE747D0154460D02F926 /* Foundation.framework */; };
 		C7C3E85F7CBE0612ACC285CF9B206BE6 /* Pods-iCarsGoogleMap-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C3D48F1D240F007F181F4B3FAE30F447 /* Pods-iCarsGoogleMap-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
@@ -41,37 +41,41 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		038DDF1C6E544BD583213618BB67A42A /* Toast-Swift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Toast-Swift.xcconfig"; sourceTree = "<group>"; };
-		07460C7ED216E0A558455D6B982692FA /* SlideMenuControllerSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SlideMenuControllerSwift-prefix.pch"; sourceTree = "<group>"; };
+		06C4CD8C83FBE894DDE202B351501B3A /* SlideMenuControllerSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SlideMenuControllerSwift.xcconfig; sourceTree = "<group>"; };
 		1238F6B1E7E53602160D09D448969B3F /* Pods_iCarsGoogleMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iCarsGoogleMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		13038E1D9E7F8A281A51D7FC04BC7FF6 /* GoogleMaps.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = Subspecs/Maps/Frameworks/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
 		1DCEF35BE2B3690466F13C353E3D6979 /* Pods-iCarsGoogleMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iCarsGoogleMap.release.xcconfig"; sourceTree = "<group>"; };
-		22619A0396EF61B398A6F13EE66BB897 /* SlideMenuControllerSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SlideMenuControllerSwift.xcconfig; sourceTree = "<group>"; };
 		266CE369DA6BA20DE9014EF6BCEF2E27 /* Pods-iCarsGoogleMap-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-iCarsGoogleMap-acknowledgements.plist"; sourceTree = "<group>"; };
-		26711CDE6ABA47363B6C2619342CCA2E /* SlideMenuControllerSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SlideMenuControllerSwift.modulemap; sourceTree = "<group>"; };
+		2B116F50AE2831D77F3CA571EC6B8754 /* GoogleMapsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsCore.framework; path = Subspecs/Maps/Frameworks/GoogleMapsCore.framework; sourceTree = "<group>"; };
 		2D04CC0E2B7CAEDC6C45D67B658AE243 /* Toast_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Toast_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AC5D9C5B838BE747D0154460D02F926 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		3DF293789723B1B5AD25DEC64FD6D9BE /* Pods-iCarsGoogleMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iCarsGoogleMap.debug.xcconfig"; sourceTree = "<group>"; };
-		4A9A45F048E5BE1D3BE6888B0ED5F93E /* SlideMenuController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SlideMenuController.swift; path = Source/SlideMenuController.swift; sourceTree = "<group>"; };
+		3F680E512C8D84ACBB4AD46404F64B8D /* SlideMenuController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SlideMenuController.swift; path = Source/SlideMenuController.swift; sourceTree = "<group>"; };
+		3F87E4E71153840B1BC324C42713A4BE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = Source/Info.plist; sourceTree = "<group>"; };
+		400339F8011BE5A14C8120FC5ED4DBF2 /* SlideMenuControllerSwift.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SlideMenuControllerSwift.h; path = Source/SlideMenuControllerSwift.h; sourceTree = "<group>"; };
 		4C6DA5D088A8DFD349B27A49293AE4A8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5601B8E79AD1EE06BA011B915B49FDF8 /* Toast-Swift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Toast-Swift.xcconfig"; sourceTree = "<group>"; };
 		5BF99401EC7DEFFB6265536977930396 /* Pods-iCarsGoogleMap-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-iCarsGoogleMap-dummy.m"; sourceTree = "<group>"; };
-		62C78B57DF8E2B78F1D9F85D21F1E9CE /* SlideMenuControllerSwift.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SlideMenuControllerSwift.h; path = Source/SlideMenuControllerSwift.h; sourceTree = "<group>"; };
-		671959EBE192D9086F580122291675BA /* Toast-Swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Toast-Swift.modulemap"; sourceTree = "<group>"; };
-		6D1B1D9A4704355EFD7C4969B14F161F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		72131AB8CA90CDC78757DE98C83CFF2A /* Toast.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Toast.swift; path = Toast/Toast.swift; sourceTree = "<group>"; };
-		7AC5ABC0A147CA0881BD982E51A5EB9B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7E514E51909E9B855BD9EB4ADE83352B /* Toast-Swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Toast-Swift-umbrella.h"; sourceTree = "<group>"; };
-		816D3D11150C342FFD4A01C7584DD65E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = Source/Info.plist; sourceTree = "<group>"; };
+		759DA921F7CD4887E19F7EB2813C4E9B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7616EC31896EE59B55EAC8502A9C9153 /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsBase.framework; path = Subspecs/Base/Frameworks/GoogleMapsBase.framework; sourceTree = "<group>"; };
+		77333DF76BE31C9ACF2CDCC2B99DBB5B /* SlideMenuControllerSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SlideMenuControllerSwift-prefix.pch"; sourceTree = "<group>"; };
 		8A084F1555596C045EB387D4E7F0B975 /* SlideMenuControllerSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SlideMenuControllerSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8C1968E741B78CE178D3A20C77B1B370 /* Toast-Swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Toast-Swift-prefix.pch"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		AEFBDA86974A67FECEFA27A98B399B73 /* Toast-Swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Toast-Swift-dummy.m"; sourceTree = "<group>"; };
-		B1EA0B9A53EBE3CB38D822ED37371788 /* SlideMenuControllerSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SlideMenuControllerSwift-dummy.m"; sourceTree = "<group>"; };
+		9D4D68DE47A62C65B47A3F73D7513652 /* SlideMenuControllerSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SlideMenuControllerSwift-umbrella.h"; sourceTree = "<group>"; };
+		A0AA0F189CF690DC6820F502670FAA1D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A129430BE86F737F18C1BC165E6D846D /* Toast-Swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Toast-Swift-umbrella.h"; sourceTree = "<group>"; };
 		BACC64101FAE4862F8806DB02FC71B0E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		C2B51352880296EAB660EE8677BE8779 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Subspecs/Maps/Frameworks/GoogleMaps.framework; sourceTree = "<group>"; };
 		C3D48F1D240F007F181F4B3FAE30F447 /* Pods-iCarsGoogleMap-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-iCarsGoogleMap-umbrella.h"; sourceTree = "<group>"; };
-		C438987277F7E6A92C5F0B0F6863AD4B /* SlideMenuControllerSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SlideMenuControllerSwift-umbrella.h"; sourceTree = "<group>"; };
+		C66C8E1963F4C008BA21BB4A8C8005BA /* SlideMenuControllerSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SlideMenuControllerSwift-dummy.m"; sourceTree = "<group>"; };
+		CC022CA0085A0A0DC7E651B45046812F /* Toast-Swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Toast-Swift-dummy.m"; sourceTree = "<group>"; };
 		D240CEE80751DB2C1DD6B9384F70733D /* Pods-iCarsGoogleMap.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-iCarsGoogleMap.modulemap"; sourceTree = "<group>"; };
 		D56B3C45D7E579B0DE6A047843062494 /* Pods-iCarsGoogleMap-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-iCarsGoogleMap-resources.sh"; sourceTree = "<group>"; };
+		DC1EDAA63F86A2C4772B1C0B8CD35FF5 /* Toast.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Toast.swift; path = Toast/Toast.swift; sourceTree = "<group>"; };
+		E498520491E588B458E037784010D49E /* SlideMenuControllerSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SlideMenuControllerSwift.modulemap; sourceTree = "<group>"; };
+		EAE70D34CA7CF9D2ADD09FBC6FAA6454 /* Toast-Swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Toast-Swift-prefix.pch"; sourceTree = "<group>"; };
 		FA2E45C43C41DEC21902892B13451F82 /* Pods-iCarsGoogleMap-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-iCarsGoogleMap-acknowledgements.markdown"; sourceTree = "<group>"; };
+		FAB1BF6ABCD222550F9F3FAB01847C15 /* Toast-Swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Toast-Swift.modulemap"; sourceTree = "<group>"; };
 		FB0E78AA1C0A264577BEDF1DF088D011 /* Pods-iCarsGoogleMap-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-iCarsGoogleMap-frameworks.sh"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,18 +108,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		21C0A6985961D1A0A3B7A0A768A91350 /* Support Files */ = {
+		1F3DC5311DA97A35B6ECCBBB2CBDE738 /* Maps */ = {
 			isa = PBXGroup;
 			children = (
-				7AC5ABC0A147CA0881BD982E51A5EB9B /* Info.plist */,
-				671959EBE192D9086F580122291675BA /* Toast-Swift.modulemap */,
-				038DDF1C6E544BD583213618BB67A42A /* Toast-Swift.xcconfig */,
-				AEFBDA86974A67FECEFA27A98B399B73 /* Toast-Swift-dummy.m */,
-				8C1968E741B78CE178D3A20C77B1B370 /* Toast-Swift-prefix.pch */,
-				7E514E51909E9B855BD9EB4ADE83352B /* Toast-Swift-umbrella.h */,
+				77EA08C22D482514F338A9C8262B5460 /* Frameworks */,
+				45DDA5A0B36520E0BDCCADCBE1CF19E2 /* Resources */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/Toast-Swift";
+			name = Maps;
 			sourceTree = "<group>";
 		};
 		250520112B6339C28D61D9C13A3F64F1 /* Pods-iCarsGoogleMap */ = {
@@ -136,37 +135,20 @@
 			path = "Target Support Files/Pods-iCarsGoogleMap";
 			sourceTree = "<group>";
 		};
-		3B05C277AC35E22707186E4A2A5420C1 /* SlideMenuControllerSwift */ = {
-			isa = PBXGroup;
-			children = (
-				816D3D11150C342FFD4A01C7584DD65E /* Info.plist */,
-				4A9A45F048E5BE1D3BE6888B0ED5F93E /* SlideMenuController.swift */,
-				62C78B57DF8E2B78F1D9F85D21F1E9CE /* SlideMenuControllerSwift.h */,
-				42D951C1D37CBB14E78A50E63C358F68 /* Support Files */,
-			);
-			path = SlideMenuControllerSwift;
-			sourceTree = "<group>";
-		};
-		42D951C1D37CBB14E78A50E63C358F68 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				6D1B1D9A4704355EFD7C4969B14F161F /* Info.plist */,
-				26711CDE6ABA47363B6C2619342CCA2E /* SlideMenuControllerSwift.modulemap */,
-				22619A0396EF61B398A6F13EE66BB897 /* SlideMenuControllerSwift.xcconfig */,
-				B1EA0B9A53EBE3CB38D822ED37371788 /* SlideMenuControllerSwift-dummy.m */,
-				07460C7ED216E0A558455D6B982692FA /* SlideMenuControllerSwift-prefix.pch */,
-				C438987277F7E6A92C5F0B0F6863AD4B /* SlideMenuControllerSwift-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/SlideMenuControllerSwift";
-			sourceTree = "<group>";
-		};
 		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				C7AB6F27FF3606F9360547F8F1977A63 /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		45DDA5A0B36520E0BDCCADCBE1CF19E2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				13038E1D9E7F8A281A51D7FC04BC7FF6 /* GoogleMaps.bundle */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		5F4781B6CA0A73E7362022FC36C79F84 /* Products */ = {
@@ -179,15 +161,69 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		6F4E2B6063F8DAE37C59DA23A6715882 /* GoogleMaps */ = {
+			isa = PBXGroup;
+			children = (
+				CEA6D2D29BB285861142FABE1DF3023F /* Base */,
+				1F3DC5311DA97A35B6ECCBBB2CBDE738 /* Maps */,
+			);
+			path = GoogleMaps;
+			sourceTree = "<group>";
+		};
+		77EA08C22D482514F338A9C8262B5460 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C2B51352880296EAB660EE8677BE8779 /* GoogleMaps.framework */,
+				2B116F50AE2831D77F3CA571EC6B8754 /* GoogleMapsCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7D831293CE4CF66125ECDFA3F7C09544 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7616EC31896EE59B55EAC8502A9C9153 /* GoogleMapsBase.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
-				F26D551FA65BEB959D0D1569E660F2E1 /* Pods */,
+				EC6176A91A46E29B6029F73496B4BCE4 /* Pods */,
 				5F4781B6CA0A73E7362022FC36C79F84 /* Products */,
 				D9B97C341E8748F38C8187C3E3232272 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		AC47859440DA1016E58255A11F931F74 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A0AA0F189CF690DC6820F502670FAA1D /* Info.plist */,
+				E498520491E588B458E037784010D49E /* SlideMenuControllerSwift.modulemap */,
+				06C4CD8C83FBE894DDE202B351501B3A /* SlideMenuControllerSwift.xcconfig */,
+				C66C8E1963F4C008BA21BB4A8C8005BA /* SlideMenuControllerSwift-dummy.m */,
+				77333DF76BE31C9ACF2CDCC2B99DBB5B /* SlideMenuControllerSwift-prefix.pch */,
+				9D4D68DE47A62C65B47A3F73D7513652 /* SlideMenuControllerSwift-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SlideMenuControllerSwift";
+			sourceTree = "<group>";
+		};
+		BC8BD991640E8666A33247A4C33EF168 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				759DA921F7CD4887E19F7EB2813C4E9B /* Info.plist */,
+				FAB1BF6ABCD222550F9F3FAB01847C15 /* Toast-Swift.modulemap */,
+				5601B8E79AD1EE06BA011B915B49FDF8 /* Toast-Swift.xcconfig */,
+				CC022CA0085A0A0DC7E651B45046812F /* Toast-Swift-dummy.m */,
+				EAE70D34CA7CF9D2ADD09FBC6FAA6454 /* Toast-Swift-prefix.pch */,
+				A129430BE86F737F18C1BC165E6D846D /* Toast-Swift-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Toast-Swift";
 			sourceTree = "<group>";
 		};
 		C7AB6F27FF3606F9360547F8F1977A63 /* iOS */ = {
@@ -199,6 +235,25 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		CDB66958107312B96E9B6681F56C8B4C /* SlideMenuControllerSwift */ = {
+			isa = PBXGroup;
+			children = (
+				3F87E4E71153840B1BC324C42713A4BE /* Info.plist */,
+				3F680E512C8D84ACBB4AD46404F64B8D /* SlideMenuController.swift */,
+				400339F8011BE5A14C8120FC5ED4DBF2 /* SlideMenuControllerSwift.h */,
+				AC47859440DA1016E58255A11F931F74 /* Support Files */,
+			);
+			path = SlideMenuControllerSwift;
+			sourceTree = "<group>";
+		};
+		CEA6D2D29BB285861142FABE1DF3023F /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				7D831293CE4CF66125ECDFA3F7C09544 /* Frameworks */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
 		D9B97C341E8748F38C8187C3E3232272 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -207,22 +262,23 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		E38C2C54CE3AF4FE62D61B404DF8350C /* Toast-Swift */ = {
+		EC6176A91A46E29B6029F73496B4BCE4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				72131AB8CA90CDC78757DE98C83CFF2A /* Toast.swift */,
-				21C0A6985961D1A0A3B7A0A768A91350 /* Support Files */,
-			);
-			path = "Toast-Swift";
-			sourceTree = "<group>";
-		};
-		F26D551FA65BEB959D0D1569E660F2E1 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				3B05C277AC35E22707186E4A2A5420C1 /* SlideMenuControllerSwift */,
-				E38C2C54CE3AF4FE62D61B404DF8350C /* Toast-Swift */,
+				6F4E2B6063F8DAE37C59DA23A6715882 /* GoogleMaps */,
+				CDB66958107312B96E9B6681F56C8B4C /* SlideMenuControllerSwift */,
+				FD6747E6E328AB3B5D908411DB4C77B8 /* Toast-Swift */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		FD6747E6E328AB3B5D908411DB4C77B8 /* Toast-Swift */ = {
+			isa = PBXGroup;
+			children = (
+				DC1EDAA63F86A2C4772B1C0B8CD35FF5 /* Toast.swift */,
+				BC8BD991640E8666A33247A4C33EF168 /* Support Files */,
+			);
+			path = "Toast-Swift";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -385,7 +441,7 @@
 /* Begin XCBuildConfiguration section */
 		0BAA34F672BA3EE4158946BA7A98B736 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 038DDF1C6E544BD583213618BB67A42A /* Toast-Swift.xcconfig */;
+			baseConfigurationReference = 5601B8E79AD1EE06BA011B915B49FDF8 /* Toast-Swift.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -462,7 +518,7 @@
 		};
 		12D62415E79162A3C444368EDEE0AB46 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 038DDF1C6E544BD583213618BB67A42A /* Toast-Swift.xcconfig */;
+			baseConfigurationReference = 5601B8E79AD1EE06BA011B915B49FDF8 /* Toast-Swift.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -494,7 +550,7 @@
 		};
 		1C6EDC83F4E0A4C8074E82ACACFBD943 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 22619A0396EF61B398A6F13EE66BB897 /* SlideMenuControllerSwift.xcconfig */;
+			baseConfigurationReference = 06C4CD8C83FBE894DDE202B351501B3A /* SlideMenuControllerSwift.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -562,7 +618,7 @@
 		};
 		E17001CB72B6918AC2E58B59FA5FF47D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 22619A0396EF61B398A6F13EE66BB897 /* SlideMenuControllerSwift.xcconfig */;
+			baseConfigurationReference = 06C4CD8C83FBE894DDE202B351501B3A /* SlideMenuControllerSwift.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8137DD04CF0AA564CBCC2A70 /* Pods_iCarsGoogleMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 099B5CCEE0218AE629536384 /* Pods_iCarsGoogleMap.framework */; };
+		9E4249CA1DC23EF5006FC7BC /* API_KEYS.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9E4249C91DC23EF5006FC7BC /* API_KEYS.plist */; };
+		9E4249D01DC26205006FC7BC /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4249CF1DC26205006FC7BC /* APIKeys.swift */; };
 		9E9A7C3B1DC0E7AD0067B115 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9A7C3A1DC0E7AD0067B115 /* AppDelegate.swift */; };
 		9E9A7C421DC0E7AD0067B115 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E9A7C411DC0E7AD0067B115 /* Assets.xcassets */; };
 		9E9A7C451DC0E7AD0067B115 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E9A7C431DC0E7AD0067B115 /* LaunchScreen.storyboard */; };
@@ -20,6 +22,8 @@
 /* Begin PBXFileReference section */
 		099B5CCEE0218AE629536384 /* Pods_iCarsGoogleMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iCarsGoogleMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C26FA658262625AD3D2CE64 /* Pods-iCarsGoogleMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iCarsGoogleMap.release.xcconfig"; path = "Pods/Target Support Files/Pods-iCarsGoogleMap/Pods-iCarsGoogleMap.release.xcconfig"; sourceTree = "<group>"; };
+		9E4249C91DC23EF5006FC7BC /* API_KEYS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = API_KEYS.plist; sourceTree = "<group>"; };
+		9E4249CF1DC26205006FC7BC /* APIKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
 		9E9A7C371DC0E7AD0067B115 /* iCarsGoogleMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iCarsGoogleMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E9A7C3A1DC0E7AD0067B115 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9E9A7C411DC0E7AD0067B115 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -64,6 +68,8 @@
 		9E9A7C2E1DC0E7AC0067B115 = {
 			isa = PBXGroup;
 			children = (
+				9E4249C91DC23EF5006FC7BC /* API_KEYS.plist */,
+				9E4249CF1DC26205006FC7BC /* APIKeys.swift */,
 				9E9A7C391DC0E7AD0067B115 /* iCarsGoogleMap */,
 				9E9A7C381DC0E7AD0067B115 /* Products */,
 				91DCFDA438B7E41EE700D939 /* Pods */,
@@ -177,6 +183,7 @@
 				9E9A7C451DC0E7AD0067B115 /* LaunchScreen.storyboard in Resources */,
 				9E9A7C421DC0E7AD0067B115 /* Assets.xcassets in Resources */,
 				9E9A7C581DC0F6C60067B115 /* LeftMenuViewController.xib in Resources */,
+				9E4249CA1DC23EF5006FC7BC /* API_KEYS.plist in Resources */,
 				9E9A7C5D1DC1018A0067B115 /* MapViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -238,6 +245,7 @@
 			files = (
 				9E9A7C3B1DC0E7AD0067B115 /* AppDelegate.swift in Sources */,
 				9E9A7C501DC0F3960067B115 /* MapViewController.swift in Sources */,
+				9E4249D01DC26205006FC7BC /* APIKeys.swift in Sources */,
 				9E9A7C571DC0F6C60067B115 /* LeftMenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,10 +294,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -301,6 +306,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -334,6 +340,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = "";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -343,6 +350,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;

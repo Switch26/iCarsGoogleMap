@@ -8,6 +8,7 @@
 
 import UIKit
 import SlideMenuControllerSwift
+import GoogleMaps
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,6 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
+        // Google API Key
+        GMSServices.provideAPIKey(valueForKey(named: "GOOGLE_MAP_API_KEY"))
+
         window = UIWindow(frame: UIScreen.main.bounds)
         
         // Creating instances of view controllers
@@ -27,6 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navController = UINavigationController()
         navController.pushViewController(mapVC, animated: false)
         
+        // Configuration
         mapVC.navigationItem.title = "Map"
         mapVC.addLeftBarButtonWithImage(#imageLiteral(resourceName: "MenuButton"))
         
