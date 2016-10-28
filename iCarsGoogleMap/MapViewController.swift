@@ -100,7 +100,19 @@ class MapViewController: UIViewController, LeftMenuDelegate, CLLocationManagerDe
             view.makeToastActivity(.center) // activity indicator
         case .denied:
             print("Location Denied")
-            showAlert(withTitle: "Cannot Obtain Location", message: "Location share has been denied. To enable, please go to your phone SETTINGS and enable location usage for this app")
+            let alertController = UIAlertController(title: "Cannot Obtain Location", message: "Location share has been denied. To enable, please go to your phone SETTINGS and enable location usage for this app", preferredStyle: .alert)
+            let bringToSettings = UIAlertAction(title: "Bring me to Settings", style: .default, handler: { (_) in
+                guard let settingsUrl = URL(string: UIApplicationOpenSettingsURLString) else {
+                    return
+                }
+                if UIApplication.shared.canOpenURL(settingsUrl) {
+                    UIApplication.shared.open(settingsUrl, completionHandler: nil)
+                }
+            })
+            alertController.addAction(bringToSettings)
+            let cancelAction = UIAlertAction(title: "Cancel", style: .default)
+            alertController.addAction(cancelAction)
+            self.present(alertController, animated: true)
             break
         case .restricted:
             print("Location use has been restricted")
