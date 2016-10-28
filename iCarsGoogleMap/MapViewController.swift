@@ -20,6 +20,8 @@ class MapViewController: UIViewController, LeftMenuDelegate, CLLocationManagerDe
     var mapView: GMSMapView?
     var locationManager = CLLocationManager()
     var myLocation = CLLocation()
+    let sanFranciscoLocation = CLLocationCoordinate2D(latitude: 37.7749, longitude: -122.4194)
+    let newYorkLocation = CLLocationCoordinate2D(latitude: 40.7128, longitude: -74.0059)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,40 +39,45 @@ class MapViewController: UIViewController, LeftMenuDelegate, CLLocationManagerDe
     }
     
     func enableGoogleMap() {
-        let camera = GMSCameraPosition.camera(withLatitude: 37.7749, longitude: -122.4194, zoom: 4.0)
+        let camera = GMSCameraPosition.camera(withLatitude: sanFranciscoLocation.latitude, longitude: sanFranciscoLocation.longitude, zoom: 4.0)
         mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         view = mapView
-        
-        /*
-        // Creates a marker in the center of the map.
-        let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2D(latitude: -33.86, longitude: 151.20)
-        marker.title = "Sydney"
-        marker.snippet = "Australia"
-        marker.map = mapView
-        */
     }
     
-    func updateMapWith(location: CLLocation) {
+    func updateMapWith(location: CLLocation) { // helper method
         let camera = GMSCameraPosition.camera(withLatitude: location.coordinate.latitude, longitude: location.coordinate.longitude, zoom: 8.0)
         mapView?.animate(to: camera)
     }
     
+    func addMarkerToLocation(location: CLLocationCoordinate2D, withTitle: String) { // helper method
+        mapView?.clear() // Clear all previous markers
+        
+        // Add new marker
+        let marker = GMSMarker()
+        marker.position = location
+        marker.title = withTitle
+        marker.map = mapView
+    }
+    
+    
     //MARK: Left Slide Menu delegate methods
     func sanFrancisoButtonPressed() {
         slideMenuController()?.closeLeft()
-        print("San Francisco")
+        updateMapWith(location: CLLocation(latitude: sanFranciscoLocation.latitude, longitude: sanFranciscoLocation.longitude))
+        addMarkerToLocation(location: sanFranciscoLocation, withTitle: "San Francisco")
     }
     
     func newYorkButtonPressed() {
         slideMenuController()?.closeLeft()
-        print("New York")
+        updateMapWith(location: CLLocation(latitude: newYorkLocation.latitude, longitude: newYorkLocation.longitude))
+        addMarkerToLocation(location: newYorkLocation, withTitle: "New York")
     }
     
     func fromSFtoNYButtonPressed() {
         slideMenuController()?.closeLeft()
         print("from NY to SF")
     }
+    
     
     //MARK: CoreLocation delegates
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -79,6 +86,8 @@ class MapViewController: UIViewController, LeftMenuDelegate, CLLocationManagerDe
         
         view.hideToastActivity() // Remove activity indicator
         myLocation = CLLocation(latitude: locationObj.coordinate.latitude, longitude: locationObj.coordinate.longitude)
+        
+        // Update Google Map with my location
         mapView?.isMyLocationEnabled = true
         updateMapWith(location: myLocation)
     }
@@ -123,6 +132,7 @@ class MapViewController: UIViewController, LeftMenuDelegate, CLLocationManagerDe
         showAlert(withTitle: "Cannot Obtiain Location", message: error.localizedDescription)
         
     }
+    
     
     //MARK: Alert helper
     func showAlert(withTitle title: String, message: String) {
