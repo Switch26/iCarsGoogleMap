@@ -49,13 +49,15 @@ class MapViewController: UIViewController, LeftMenuDelegate, CLLocationManagerDe
         mapView?.animate(to: camera)
     }
     
-    func addMarkerToLocation(location: CLLocationCoordinate2D, withTitle: String) { // helper method
-        mapView?.clear() // Clear all previous markers
+    func addMarkerToLocation(location: CLLocationCoordinate2D, withTitle: String, clearPreviousMarkers: Bool) { // helper method
+        if clearPreviousMarkers == true {
+            mapView?.clear()
+        }
         
-        // Add new marker
         let marker = GMSMarker()
         marker.position = location
         marker.title = withTitle
+        marker.appearAnimation = kGMSMarkerAnimationPop
         marker.map = mapView
     }
     
@@ -64,18 +66,34 @@ class MapViewController: UIViewController, LeftMenuDelegate, CLLocationManagerDe
     func sanFrancisoButtonPressed() {
         slideMenuController()?.closeLeft()
         updateMapWith(location: CLLocation(latitude: sanFranciscoLocation.latitude, longitude: sanFranciscoLocation.longitude))
-        addMarkerToLocation(location: sanFranciscoLocation, withTitle: "San Francisco")
+        addMarkerToLocation(location: sanFranciscoLocation, withTitle: "San Francisco", clearPreviousMarkers: true)
     }
     
     func newYorkButtonPressed() {
         slideMenuController()?.closeLeft()
         updateMapWith(location: CLLocation(latitude: newYorkLocation.latitude, longitude: newYorkLocation.longitude))
-        addMarkerToLocation(location: newYorkLocation, withTitle: "New York")
+        addMarkerToLocation(location: newYorkLocation, withTitle: "New York", clearPreviousMarkers:  true)
     }
     
     func fromSFtoNYButtonPressed() {
         slideMenuController()?.closeLeft()
-        print("from NY to SF")
+
+        let path = GMSMutablePath()
+        path.add(sanFranciscoLocation)
+        path.add(newYorkLocation)
+        
+        let rectangle = GMSPolyline(path: path)
+        rectangle.strokeWidth = 2.0
+        rectangle.map = mapView
+        
+        let bounds = GMSCoordinateBounds(coordinate: sanFranciscoLocation, coordinate: newYorkLocation)
+        let camera = mapView?.camera(for: bounds, insets: UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20))
+        if let validCamera = camera {
+            mapView?.animate(to: validCamera)
+        }
+        
+        addMarkerToLocation(location: sanFranciscoLocation, withTitle: "San Francisco", clearPreviousMarkers: false)
+        addMarkerToLocation(location: newYorkLocation, withTitle: "New York", clearPreviousMarkers:  false)
     }
     
     
