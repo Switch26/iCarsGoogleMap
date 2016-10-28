@@ -17,11 +17,9 @@ import GoogleMaps
 class MapViewController: UIViewController, LeftMenuDelegate, CLLocationManagerDelegate {
     
     var leftMenuVC: LeftMenuViewController?
+    var mapView: GMSMapView?
     var locationManager = CLLocationManager()
-    var latitude = ""
-    var longitude = ""
     var myLocation = CLLocation()
-    var lastLocationTimeStamp = NSDate()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,26 +33,27 @@ class MapViewController: UIViewController, LeftMenuDelegate, CLLocationManagerDe
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        //determineUserLocation()
-        //loadGoogleMap()
+        enableGoogleMap()
     }
     
-    func loadGoogleMap() {
-        
-        // Create a GMSCameraPosition that tells the map to display the
-        // coordinate -33.86,151.20 at zoom level 6.
-        let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 6.0)
-        let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
-        //mapView.isMyLocationEnabled = true
+    func enableGoogleMap() {
+        let camera = GMSCameraPosition.camera(withLatitude: 37.7749, longitude: -122.4194, zoom: 4.0)
+        mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         view = mapView
         
+        /*
         // Creates a marker in the center of the map.
         let marker = GMSMarker()
         marker.position = CLLocationCoordinate2D(latitude: -33.86, longitude: 151.20)
         marker.title = "Sydney"
         marker.snippet = "Australia"
         marker.map = mapView
+        */
+    }
     
+    func updateMapWith(location: CLLocation) {
+        let camera = GMSCameraPosition.camera(withLatitude: location.coordinate.latitude, longitude: location.coordinate.longitude, zoom: 8.0)
+        mapView?.animate(to: camera)
     }
     
     //MARK: Left Slide Menu delegate methods
@@ -77,15 +76,11 @@ class MapViewController: UIViewController, LeftMenuDelegate, CLLocationManagerDe
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let locationArray = locations as NSArray
         let locationObj = locationArray.lastObject as! CLLocation
-        latitude = "\(locationObj.coordinate.latitude)"
-        longitude = "\(locationObj.coordinate.longitude)"
-        lastLocationTimeStamp = locationObj.timestamp as NSDate
-        
-        print(latitude)
-        print(longitude)
         
         view.hideToastActivity() // Remove activity indicator
         myLocation = CLLocation(latitude: locationObj.coordinate.latitude, longitude: locationObj.coordinate.longitude)
+        mapView?.isMyLocationEnabled = true
+        updateMapWith(location: myLocation)
     }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
@@ -107,6 +102,8 @@ class MapViewController: UIViewController, LeftMenuDelegate, CLLocationManagerDe
                 }
                 if UIApplication.shared.canOpenURL(settingsUrl) {
                     UIApplication.shared.open(settingsUrl, completionHandler: nil)
+                } else {
+                    self.view.makeToast("Oops... coudn't bring you to settings", duration: 2.0, position: .center)
                 }
             })
             alertController.addAction(bringToSettings)
