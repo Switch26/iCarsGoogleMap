@@ -77,23 +77,29 @@ class MapViewController: UIViewController, LeftMenuDelegate, CLLocationManagerDe
     
     func fromSFtoNYButtonPressed() {
         slideMenuController()?.closeLeft()
+        
+        let originString = "\(sanFranciscoLocation.latitude), \(sanFranciscoLocation.longitude)"
+        let destinationString = "\(newYorkLocation.latitude), \(newYorkLocation.longitude)"
+        NetworkManager.getDrivingRoutePointsBetween(origin: originString, destination: destinationString) { (encodedPoints: String?, success: Bool) in
+            
+            if let encodedPath = encodedPoints {
+                let path = GMSMutablePath(fromEncodedPath: encodedPath)
+                
+                let rectangle = GMSPolyline(path: path)
+                rectangle.strokeWidth = 3.0
+                rectangle.map = self.mapView
+                
+                let bounds = GMSCoordinateBounds(coordinate: self.sanFranciscoLocation, coordinate: self.newYorkLocation)
+                let camera = self.mapView?.camera(for: bounds, insets: UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20))
+                if let validCamera = camera {
+                    self.mapView?.animate(to: validCamera)
+                }
+                
+                self.addMarkerToLocation(location: self.sanFranciscoLocation, withTitle: "San Francisco", clearPreviousMarkers: false)
+                self.addMarkerToLocation(location: self.newYorkLocation, withTitle: "New York", clearPreviousMarkers:  false)
 
-        let path = GMSMutablePath()
-        path.add(sanFranciscoLocation)
-        path.add(newYorkLocation)
-        
-        let rectangle = GMSPolyline(path: path)
-        rectangle.strokeWidth = 2.0
-        rectangle.map = mapView
-        
-        let bounds = GMSCoordinateBounds(coordinate: sanFranciscoLocation, coordinate: newYorkLocation)
-        let camera = mapView?.camera(for: bounds, insets: UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20))
-        if let validCamera = camera {
-            mapView?.animate(to: validCamera)
+            }
         }
-        
-        addMarkerToLocation(location: sanFranciscoLocation, withTitle: "San Francisco", clearPreviousMarkers: false)
-        addMarkerToLocation(location: newYorkLocation, withTitle: "New York", clearPreviousMarkers:  false)
     }
     
     

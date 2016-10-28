@@ -10,6 +10,7 @@
 		8137DD04CF0AA564CBCC2A70 /* Pods_iCarsGoogleMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 099B5CCEE0218AE629536384 /* Pods_iCarsGoogleMap.framework */; };
 		9E4249CA1DC23EF5006FC7BC /* API_KEYS.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9E4249C91DC23EF5006FC7BC /* API_KEYS.plist */; };
 		9E4249D01DC26205006FC7BC /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4249CF1DC26205006FC7BC /* APIKeys.swift */; };
+		9E4249D21DC3C5BE006FC7BC /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4249D11DC3C5BE006FC7BC /* NetworkManager.swift */; };
 		9E9A7C3B1DC0E7AD0067B115 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9A7C3A1DC0E7AD0067B115 /* AppDelegate.swift */; };
 		9E9A7C421DC0E7AD0067B115 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E9A7C411DC0E7AD0067B115 /* Assets.xcassets */; };
 		9E9A7C451DC0E7AD0067B115 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E9A7C431DC0E7AD0067B115 /* LaunchScreen.storyboard */; };
@@ -24,6 +25,7 @@
 		8C26FA658262625AD3D2CE64 /* Pods-iCarsGoogleMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iCarsGoogleMap.release.xcconfig"; path = "Pods/Target Support Files/Pods-iCarsGoogleMap/Pods-iCarsGoogleMap.release.xcconfig"; sourceTree = "<group>"; };
 		9E4249C91DC23EF5006FC7BC /* API_KEYS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = API_KEYS.plist; sourceTree = "<group>"; };
 		9E4249CF1DC26205006FC7BC /* APIKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
+		9E4249D11DC3C5BE006FC7BC /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkManager.swift; path = ../NetworkManager.swift; sourceTree = "<group>"; };
 		9E9A7C371DC0E7AD0067B115 /* iCarsGoogleMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iCarsGoogleMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E9A7C3A1DC0E7AD0067B115 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9E9A7C411DC0E7AD0067B115 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				9E9A7C3A1DC0E7AD0067B115 /* AppDelegate.swift */,
+				9E4249D11DC3C5BE006FC7BC /* NetworkManager.swift */,
 				9E9A7C591DC0F6CB0067B115 /* Menu */,
 				9E9A7C541DC0F69E0067B115 /* Map */,
 				9E9A7C411DC0E7AD0067B115 /* Assets.xcassets */,
@@ -245,6 +248,7 @@
 			files = (
 				9E9A7C3B1DC0E7AD0067B115 /* AppDelegate.swift in Sources */,
 				9E9A7C501DC0F3960067B115 /* MapViewController.swift in Sources */,
+				9E4249D21DC3C5BE006FC7BC /* NetworkManager.swift in Sources */,
 				9E4249D01DC26205006FC7BC /* APIKeys.swift in Sources */,
 				9E9A7C571DC0F6C60067B115 /* LeftMenuViewController.swift in Sources */,
 			);
