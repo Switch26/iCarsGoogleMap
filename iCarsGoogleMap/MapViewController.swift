@@ -80,22 +80,24 @@ class MapViewController: UIViewController, LeftMenuDelegate, CLLocationManagerDe
         
         let originString = "\(sanFranciscoLocation.latitude), \(sanFranciscoLocation.longitude)"
         let destinationString = "\(newYorkLocation.latitude), \(newYorkLocation.longitude)"
+        view.makeToastActivity(.center) // activity indicator
+        
         NetworkManager.getDrivingRoutePointsBetween(origin: originString, destination: destinationString) { (encodedPoints: String?, success: Bool) in
             
-            print("Data received")
-            
             if let encodedPath = encodedPoints {
-                let path = GMSMutablePath(fromEncodedPath: encodedPath)
                 
-                let rectangle = GMSPolyline(path: path)
-                rectangle.strokeWidth = 3.0
-                rectangle.map = self.mapView
+                let path = GMSMutablePath(fromEncodedPath: encodedPath)
+                let polyline = GMSPolyline(path: path)
+                polyline.strokeColor = self.view.tintColor
+                polyline.strokeWidth = 3.0
+                polyline.map = self.mapView
                 
                 let bounds = GMSCoordinateBounds(coordinate: self.sanFranciscoLocation, coordinate: self.newYorkLocation)
                 let camera = self.mapView?.camera(for: bounds, insets: UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20))
                 if let validCamera = camera {
                     DispatchQueue.main.async {
                         self.mapView?.animate(to: validCamera)
+                        self.view.hideToastActivity() // hide activity indicator
                     }
                 }
                 
