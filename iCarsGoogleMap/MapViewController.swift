@@ -135,6 +135,7 @@ class MapViewController: UIViewController, LeftMenuDelegate, CLLocationManagerDe
             print("AuthorizedWhenInUse")
             locationManager.requestLocation()
             view.makeToastActivity(.center) // activity indicator
+            view.makeToast("Obtaining location...", duration: 1.0, position: CGPoint(x: view.frame.width/2, y: view.frame.height/2 - 80))
         case .denied:
             print("Location Denied")
             let alertController = UIAlertController(title: "Cannot Obtain Location", message: "Location share has been denied. To enable, please go to your phone SETTINGS and enable location usage for this app", preferredStyle: .alert)
