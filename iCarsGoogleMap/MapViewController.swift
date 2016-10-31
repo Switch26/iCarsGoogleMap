@@ -155,7 +155,7 @@ class MapViewController: UIViewController, LeftMenuDelegate, CLLocationManagerDe
             self.present(alertController, animated: true)
             break
         case .restricted:
-            print("Location use has been restricted")
+            print("Location share has been restricted")
             showAlert(withTitle: "Cannot Obtain Location", message: "Location share has been restricted on this device.")
         case .authorizedAlways: break
         }
