@@ -6,10 +6,9 @@ To launch the project, use `iCarsGoogleMap.xcworkspace`
 Google API key is placed in a file called `API_KEYS.plist`
 
 ## Screenshots
-
-![screenshot1](/screenshots/screenshot1.png "screenshot1")
-![screenshot2](/screenshots/screenshot2.png "screenshot2")
-![screenshot3](/screenshots/screenshot3.png "screenshot3")
+![screenshot1](/screenshots/screen1.png "screenshot1")
+![screenshot2](/screenshots/screen2.png "screenshot2")
+![screenshot3](/screenshots/screen3.png "screenshot3")
 
 ## Implementation notes:
 
