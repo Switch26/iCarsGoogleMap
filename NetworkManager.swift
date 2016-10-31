@@ -10,7 +10,7 @@ import Foundation
 
 struct NetworkManager {
     
-    static func getDrivingRoutePointsBetween(origin: String, destination: String, completionHandler: @escaping ((_ encodedPoints:String?,_ success: Bool) -> Void)) {
+    static func getDrivingRoutePointsBetween(origin: String, destination: String, completionHandler: @escaping ((_ encodedPoints:String?) -> Void)) {
         
         let url = "https://maps.googleapis.com/maps/api/directions/json?origin=\(origin)&destination=\(destination)"
         let formatedString = url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
@@ -28,12 +28,12 @@ struct NetworkManager {
                         let routes = validData["routes"] as! [[String: Any]]
                         let overviewPolylineRoute = routes.first?["overview_polyline"] as? [String: Any]
                         let points = overviewPolylineRoute?["points"] as? String
-                        completionHandler(points, true)
+                        completionHandler(points)
                     }
                 }
             } else { // network error
                 print("Error: \(error?.localizedDescription)")
-                completionHandler(nil, false)
+                completionHandler(nil)
             }
         }
         

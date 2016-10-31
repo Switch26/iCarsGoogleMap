@@ -46,7 +46,8 @@ class MapViewController: UIViewController, LeftMenuDelegate, CLLocationManagerDe
     
     func updateMapWith(location: CLLocation) { // helper method
         let camera = GMSCameraPosition.camera(withLatitude: location.coordinate.latitude, longitude: location.coordinate.longitude, zoom: 8.0)
-        mapView?.animate(to: camera)
+        mapView?.animate(to: camera) // with animation
+        //mapView?.camera = camera // no animation
     }
     
     func addMarkerToLocation(location: CLLocationCoordinate2D, withTitle: String, clearPreviousMarkers: Bool) { // helper method
@@ -82,7 +83,7 @@ class MapViewController: UIViewController, LeftMenuDelegate, CLLocationManagerDe
         let destinationString = "\(newYorkLocation.latitude), \(newYorkLocation.longitude)"
         view.makeToastActivity(.center) // activity indicator
         
-        NetworkManager.getDrivingRoutePointsBetween(origin: originString, destination: destinationString) { (encodedPoints: String?, success: Bool) in
+        NetworkManager.getDrivingRoutePointsBetween(origin: originString, destination: destinationString) { (encodedPoints: String?) in
             
             if let encodedPath = encodedPoints {
                 
@@ -103,6 +104,9 @@ class MapViewController: UIViewController, LeftMenuDelegate, CLLocationManagerDe
                 
                 self.addMarkerToLocation(location: self.sanFranciscoLocation, withTitle: "San Francisco", clearPreviousMarkers: false)
                 self.addMarkerToLocation(location: self.newYorkLocation, withTitle: "New York", clearPreviousMarkers:  false)
+            
+            } else { // network problem
+                self.showAlert(withTitle: "Error", message: "There was a problem downloading driving route from the Google Server")
             }
         }
     }

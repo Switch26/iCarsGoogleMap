@@ -5,6 +5,12 @@
 //  Created by Serguei Vinnitskii on 10/27/16.
 //  Copyright © 2016 Serguei Vinnitskii. All rights reserved.
 //
+//
+//
+
+
+// This is a wrapper method allowing you to access the values form "API_KEYS.plist"
+// Here is how to use it: valueForKey(named: "NAME_OF_THE_KEY")
 
 import Foundation
 
