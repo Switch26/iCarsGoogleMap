@@ -82,6 +82,8 @@ class MapViewController: UIViewController, LeftMenuDelegate, CLLocationManagerDe
         let destinationString = "\(newYorkLocation.latitude), \(newYorkLocation.longitude)"
         NetworkManager.getDrivingRoutePointsBetween(origin: originString, destination: destinationString) { (encodedPoints: String?, success: Bool) in
             
+            print("Data received")
+            
             if let encodedPath = encodedPoints {
                 let path = GMSMutablePath(fromEncodedPath: encodedPath)
                 
@@ -92,12 +94,13 @@ class MapViewController: UIViewController, LeftMenuDelegate, CLLocationManagerDe
                 let bounds = GMSCoordinateBounds(coordinate: self.sanFranciscoLocation, coordinate: self.newYorkLocation)
                 let camera = self.mapView?.camera(for: bounds, insets: UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20))
                 if let validCamera = camera {
-                    self.mapView?.animate(to: validCamera)
+                    DispatchQueue.main.async {
+                        self.mapView?.animate(to: validCamera)
+                    }
                 }
                 
                 self.addMarkerToLocation(location: self.sanFranciscoLocation, withTitle: "San Francisco", clearPreviousMarkers: false)
                 self.addMarkerToLocation(location: self.newYorkLocation, withTitle: "New York", clearPreviousMarkers:  false)
-
             }
         }
     }

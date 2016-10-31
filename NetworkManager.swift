@@ -36,6 +36,7 @@ struct NetworkManager {
                 completionHandler(nil, false)
             }
         }
+        
         task.resume()
     }
 
