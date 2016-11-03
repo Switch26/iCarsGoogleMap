@@ -21,7 +21,7 @@ class MapViewController: UIViewController, LeftMenuDelegate, CLLocationManagerDe
     var locationManager = CLLocationManager()
     var myLocation = CLLocation()
     let sanFranciscoLocation = CLLocationCoordinate2D(latitude: 37.7749, longitude: -122.4194)
-    let newYorkLocation = CLLocationCoordinate2D(latitude: 40.7128, longitude: -74.0059)
+    let losAngelesLocation = CLLocationCoordinate2D(latitude: 34.0522, longitude: -118.2437)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,19 +72,19 @@ class MapViewController: UIViewController, LeftMenuDelegate, CLLocationManagerDe
     
     func newYorkButtonPressed() {
         slideMenuController()?.closeLeft()
-        updateMapWith(location: CLLocation(latitude: newYorkLocation.latitude, longitude: newYorkLocation.longitude))
-        addMarkerToLocation(location: newYorkLocation, withTitle: "New York", clearPreviousMarkers:  true)
+        updateMapWith(location: CLLocation(latitude: losAngelesLocation.latitude, longitude: losAngelesLocation.longitude))
+        addMarkerToLocation(location: losAngelesLocation, withTitle: "New York", clearPreviousMarkers:  true)
     }
     
     func fromSFtoNYButtonPressed() {
         slideMenuController()?.closeLeft()
         
         let originString = "\(sanFranciscoLocation.latitude), \(sanFranciscoLocation.longitude)"
-        let destinationString = "\(newYorkLocation.latitude), \(newYorkLocation.longitude)"
+        let destinationString = "\(losAngelesLocation.latitude), \(losAngelesLocation.longitude)"
+        let waypoints = "35.3733, -119.0187"
         view.makeToastActivity(.center) // activity indicator
         
-        NetworkManager.getDrivingRoutePointsBetween(origin: originString, destination: destinationString) { (encodedPoints: String?) in
-            
+        NetworkManager.getDrivingRoutePointsBetween(origin: originString, destination: destinationString, stopPoints: waypoints) { (encodedPoints: String?, arrayOfMarkersToAdd: [CLLocationCoordinate2D]?) in
             if let encodedPath = encodedPoints {
                 
                 let path = GMSMutablePath(fromEncodedPath: encodedPath)
@@ -93,7 +93,7 @@ class MapViewController: UIViewController, LeftMenuDelegate, CLLocationManagerDe
                 polyline.strokeWidth = 3.0
                 polyline.map = self.mapView
                 
-                let bounds = GMSCoordinateBounds(coordinate: self.sanFranciscoLocation, coordinate: self.newYorkLocation)
+                let bounds = GMSCoordinateBounds(coordinate: self.sanFranciscoLocation, coordinate: self.losAngelesLocation)
                 let camera = self.mapView?.camera(for: bounds, insets: UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20))
                 if let validCamera = camera {
                     DispatchQueue.main.async {
@@ -101,14 +101,25 @@ class MapViewController: UIViewController, LeftMenuDelegate, CLLocationManagerDe
                         self.view.hideToastActivity() // hide activity indicator
                     }
                 }
-                
                 self.addMarkerToLocation(location: self.sanFranciscoLocation, withTitle: "San Francisco", clearPreviousMarkers: false)
-                self.addMarkerToLocation(location: self.newYorkLocation, withTitle: "New York", clearPreviousMarkers:  false)
-            
+                self.addMarkerToLocation(location: self.losAngelesLocation, withTitle: "Los Angeles", clearPreviousMarkers:  false)
+                
+                if arrayOfMarkersToAdd != nil {
+                    for markerToAdd in arrayOfMarkersToAdd! {
+                        DispatchQueue.main.async {
+                            self.addMarkerToLocation(location: markerToAdd, withTitle: "Stop", clearPreviousMarkers: false)
+                        }
+                    }
+                } else {
+                    self.showAlert(withTitle: "Error", message: "There was a problem downloading stops")
+                }
+
+                
             } else { // network problem
                 self.showAlert(withTitle: "Error", message: "There was a problem downloading driving route from the Google Server")
             }
         }
+        
     }
     
     

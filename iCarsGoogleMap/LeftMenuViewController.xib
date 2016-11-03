@@ -42,7 +42,7 @@
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lYQ-jE-us6">
                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
-                            <state key="normal" title="New York"/>
+                            <state key="normal" title="Los Angeles"/>
                             <connections>
                                 <action selector="newYorkButtonPressed:" destination="-1" eventType="touchUpInside" id="BjP-o1-8LR"/>
                             </connections>
